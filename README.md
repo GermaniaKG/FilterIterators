@@ -17,6 +17,8 @@ Alternatively, add this package directly to your *composer.json:*
     "germania-kg/filteriterators": "^1.0"
 }
 ```
+
+
 ##KeyNotFalseFilterIterator
 
 Lets all items pass that are not explicitely excluded with `active=false` or `active=0`. 
