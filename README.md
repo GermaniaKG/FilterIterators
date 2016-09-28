@@ -51,7 +51,7 @@ endforeach;
 Develop using `develop` branch, using [Git Flow](https://github.com/nvie/gitflow). 
 
 ```bash
-$ git clone <repo> germania-filteriterators
+$ git clone git@github.com:GermaniaKG/FilterIterators.git germania-filteriterators
 $ cd germania-filteriterators
 $ cp phpunit.xml.dist phpunit.xml
 $ phpunit
