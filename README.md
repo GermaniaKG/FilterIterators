@@ -17,6 +17,8 @@ Alternatively, add this package directly to your *composer.json:*
     "germania-kg/filteriterators": "^1.0"
 }
 ```
+
+
 ##KeyNotFalseFilterIterator
 
 Lets all items pass that are not explicitely excluded with `active=false` or `active=0`. 
@@ -51,7 +53,7 @@ endforeach;
 Develop using `develop` branch, using [Git Flow](https://github.com/nvie/gitflow). 
 
 ```bash
-$ git clone <repo> germania-filteriterators
+$ git clone git@github.com:GermaniaKG/FilterIterators.git germania-filteriterators
 $ cd germania-filteriterators
 $ cp phpunit.xml.dist phpunit.xml
 $ phpunit
