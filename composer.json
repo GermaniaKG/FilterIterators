@@ -1,0 +1,23 @@
+{
+	"name": "germania-kg/filteriterators",
+
+	"authors": [
+		{
+			"name":  "Carsten Witt",
+			"email": "carstenwitt@germania-kg.de",
+			"role":  "Developer"
+		}
+	],
+
+	"autoload": {
+		"psr-4": {
+			"Germania\\FilterIterators\\": "src"
+		}
+	},
+
+	"require-dev": {
+			"satooshi/php-coveralls": "^1.0",
+			"phpunit/phpunit": "^5.2"
+	}
+
+}
