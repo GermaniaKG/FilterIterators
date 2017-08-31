@@ -1,6 +1,12 @@
 {
 	"name": "germania-kg/filteriterators",
 
+	"description": "FilterIterators for two-dimensional Traversables",
+
+	"keywords": [ "Filter", "Iterator", "Traversables" ],
+
+	"license": "MIT",
+
 	"authors": [
 		{
 			"name":  "Carsten Witt",
