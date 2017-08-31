@@ -1,10 +1,10 @@
-#Germania\FilterIterators
+# Germania KG · FilterIterators
 
 **FilterIterators for two-dimensional Traversables.**
 
 
 
-##Installation
+## Installation
 
 ```bash
 $ composer require germania-kg/filteriterators
@@ -19,7 +19,7 @@ Alternatively, add this package directly to your *composer.json:*
 ```
 
 
-##KeyNotFalseFilterIterator
+## KeyNotFalseFilterIterator
 
 Lets all items pass that are not explicitely excluded with `active=false` or `active=0`. 
 The Constructor accepts anything that is Traversable. 
@@ -48,13 +48,26 @@ foreach( $filter as $item ):
 endforeach;
 ```
 
-##Development and Testing
+## Issues
 
-Develop using `develop` branch, using [Git Flow](https://github.com/nvie/gitflow). 
+See [issues list.][i0]
+
+[i0]: https://github.com/GermaniaKG/FilterIterators/issues 
+
+
+## Development
 
 ```bash
 $ git clone git@github.com:GermaniaKG/FilterIterators.git germania-filteriterators
 $ cd germania-filteriterators
-$ cp phpunit.xml.dist phpunit.xml
-$ phpunit
+$ composer install
+```
+
+## Unit tests
+
+Either copy `phpunit.xml.dist` to `phpunit.xml` and adapt to your needs, or leave as is. 
+Run [PhpUnit](https://phpunit.de/) like this:
+
+```bash
+$ vendor/bin/phpunit
 ```
