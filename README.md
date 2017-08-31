@@ -2,6 +2,10 @@
 
 **FilterIterators for two-dimensional Traversables.**
 
+[![Build Status](https://travis-ci.org/GermaniaKG/FilterIterators.svg?branch=master)](https://travis-ci.org/GermaniaKG/FilterIterators)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/GermaniaKG/FilterIterators/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/FilterIterators/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/GermaniaKG/FilterIterators/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/FilterIterators/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/GermaniaKG/FilterIterators/badges/build.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/FilterIterators/build-status/master)
 
 
 ## Installation
