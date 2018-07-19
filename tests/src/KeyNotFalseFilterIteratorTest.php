@@ -3,7 +3,7 @@ namespace tests;
 
 use Germania\FilterIterators\KeyNotFalseFilterIterator;
 
-class KeyNotFalseFilterIteratorTest extends \PHPUnit_Framework_TestCase
+class KeyNotFalseFilterIteratorTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @dataProvider provideIterators
