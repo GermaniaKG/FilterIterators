@@ -25,8 +25,8 @@ Alternatively, add this package directly to your *composer.json:*
 
 ## KeyNotFalseFilterIterator
 
-Lets all items pass that are not explicitely excluded with `active=false` or `active=0`. 
-The Constructor accepts anything that is Traversable. 
+Lets all items pass that are not explicitely excluded with `active=false` or `active=0`.   
+The Constructor accepts anything that is Traversable.   
 The Traversable may contain both arrays or (StdClass) objects.
 
 ```php
@@ -52,11 +52,39 @@ foreach( $filter as $item ):
 endforeach;
 ```
 
+## NotEmptyFieldFilterIterator
+
+Lets all items pass that have a field whose value is not empty.  
+The Constructor accepts anything that is Traversable.  
+The Traversable may contain both arrays or (StdClass) objects.  
+
+```php
+<?php
+use Germania\FilterIterators\NotEmptyFieldFilterIterator;
+
+// Items may be Arrays or StdClass objects
+$data = [
+  // These are not "inactive"
+  [ 'name' => 'John', 'active' => true ],
+  [ 'name' => 'George' ],
+
+  // but these are:
+  [ 'name' => 'Paul',  'active' => false ],
+  [ 'name' => 'Ringo', 'active' => 0 ],
+];
+
+$filter = new NotEmptyFieldFilterIterator( $data, "active" );
+foreach( $filter as $item ):
+	// John
+	echo $item['name'];
+endforeach;
+```
+
 ## Issues
 
 See [issues list.][i0]
 
-[i0]: https://github.com/GermaniaKG/FilterIterators/issues 
+[i0]: https://github.com/GermaniaKG/FilterIterators/issues
 
 
 ## Development
