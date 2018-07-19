@@ -1,16 +1,16 @@
 <?php
 namespace tests;
 
-use Germania\FilterIterators\KeyNotFalseFilterIterator;
+use Germania\FilterIterators\NotEmptyFieldFilterIterator;
 
-class KeyNotFalseFilterIteratorTest extends \PHPUnit\Framework\TestCase
+class NotEmptyFieldFilterIteratorTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @dataProvider provideIterators
      */
     public function testFilter( $data, $keyword, $expected_num) {
 
-        $sut = new KeyNotFalseFilterIterator( $data, $keyword );
+        $sut = new NotEmptyFieldFilterIterator( $data, $keyword );
         $results = array();
         foreach($sut as $active_item) {
             $results[] = $active_item;
@@ -45,8 +45,8 @@ class KeyNotFalseFilterIteratorTest extends \PHPUnit\Framework\TestCase
         }
 
         return array(
-            [ new \ArrayObject( $basic_array )   , $keyword, 7 ],
-            [ new \ArrayObject( $basic_objects ) , $keyword, 8 ]
+            [ new \ArrayObject( $basic_array )   , $keyword, 4 ],
+            [ new \ArrayObject( $basic_objects ) , $keyword, 4 ]
         );
     }
 }
