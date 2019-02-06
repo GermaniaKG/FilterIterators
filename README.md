@@ -2,13 +2,15 @@
 
 **FilterIterators for two-dimensional Traversables.**
 
-[![Build Status](https://travis-ci.org/GermaniaKG/FilterIterators.svg?branch=master)](https://travis-ci.org/GermaniaKG/FilterIterators)
+[![Packagist](https://img.shields.io/packagist/v/germania-kg/filteriterators.svg?style=flat)](https://packagist.org/packages/germania-kg/filteriterators)
+[![PHP version](https://img.shields.io/packagist/php-v/germania-kg/filteriterators.svg)](https://packagist.org/packages/germania-kg/filteriterators)
+[![Build Status](https://img.shields.io/travis/GermaniaKG/FilterIterators.svg?label=Travis%20CI)](https://travis-ci.org/GermaniaKG/FilterIterators)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/GermaniaKG/FilterIterators/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/FilterIterators/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/GermaniaKG/FilterIterators/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/FilterIterators/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/GermaniaKG/FilterIterators/badges/build.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/FilterIterators/build-status/master)
 
 
-## Installation
+## Installation with Composer
 
 ```bash
 $ composer require germania-kg/filteriterators
@@ -90,16 +92,18 @@ See [issues list.][i0]
 ## Development
 
 ```bash
-$ git clone git@github.com:GermaniaKG/FilterIterators.git germania-filteriterators
-$ cd germania-filteriterators
+$ git clone https://github.com/GermaniaKG/FilterIterators.git
+$ cd FilterIterators
 $ composer install
 ```
 
 ## Unit tests
 
-Either copy `phpunit.xml.dist` to `phpunit.xml` and adapt to your needs, or leave as is. 
-Run [PhpUnit](https://phpunit.de/) like this:
+Either copy `phpunit.xml.dist` to `phpunit.xml` and adapt to your needs, or leave as is. Run [PhpUnit](https://phpunit.de/) test or composer scripts like this:
 
 ```bash
+$ composer test
+# or
 $ vendor/bin/phpunit
 ```
+
