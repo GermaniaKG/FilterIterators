@@ -21,9 +21,9 @@
 		}
 	},
 
-	  "autoload-dev": {
-	      "psr-4": { "tests\\": "tests/src" }
-	  },
+  "autoload-dev": {
+      "psr-4": { "tests\\": "tests/src" }
+  },
 
 	"require": {
 		"php": "^7.0"

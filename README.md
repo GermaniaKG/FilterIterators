@@ -20,7 +20,7 @@ Alternatively, add this package directly to your *composer.json:*
 
 ```json
 "require": {
-    "germania-kg/filteriterators": "^1.0"
+    "germania-kg/filteriterators": "^2.0"
 }
 ```
 
