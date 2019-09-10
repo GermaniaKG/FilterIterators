@@ -12,24 +12,22 @@ class KeyNotFalseFilterIterator extends \FilterIterator
      * @param \Traversable Anything iterable
      * @param string       $active_key The key to compare
      */
-    public function __construct (\Traversable $iterator, $active_key)
+    public function __construct(\Traversable $iterator, $active_key)
     {
         $this->active_key = $active_key;
-        parent::__construct( new \IteratorIterator( $iterator ));
+        parent::__construct(new \IteratorIterator($iterator));
     }
 
     public function accept()
     {
         $current = $this->getInnerIterator()->current();
 
-        if (is_array( $current )) {
-            return (!array_key_exists( $this->active_key, $current )
+        if (is_array($current)) {
+            return (!array_key_exists($this->active_key, $current)
             or ($current[ $this->active_key ] != false));
-        }
-        elseif (is_object($current)) {
-
+        } elseif (is_object($current)) {
             $key = $this->active_key;
-            return (!isset( $current->$key )
+            return (!isset($current->$key)
             or ($current->$key != false));
         }
 
