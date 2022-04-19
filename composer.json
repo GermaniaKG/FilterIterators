@@ -26,13 +26,13 @@
   },
 
 	"require": {
-		"php": "^7.0|^8.0"
+		"php": "^7.3|^8.0"
 	},
 
     "require-dev": {
         "php-coveralls/php-coveralls": "^2.0",
         "phpunit/phpunit": "^9.0",
-        "friendsofphp/php-cs-fixer": "^2.12"
+        "friendsofphp/php-cs-fixer": "^2.12|^3.0"
     },
 
     "scripts": {
