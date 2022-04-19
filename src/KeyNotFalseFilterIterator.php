@@ -18,7 +18,7 @@ class KeyNotFalseFilterIterator extends \FilterIterator
         parent::__construct(new \IteratorIterator($iterator));
     }
 
-    public function accept()
+    public function accept() : bool
     {
         $current = $this->getInnerIterator()->current();
 

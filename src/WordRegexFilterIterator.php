@@ -31,7 +31,7 @@ class WordRegexFilterIterator extends \FilterIterator
     }
 
 
-    public function accept()
+    public function accept() : bool
     {
         $current = $this->getInnerIterator()->current();
 
