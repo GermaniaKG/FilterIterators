@@ -24,7 +24,7 @@ class NotEmptyFieldFilterIterator extends \FilterIterator
     }
 
 
-    public function accept()
+    public function accept() : bool
     {
         $liste = $this->getInnerIterator()->current();
         $field_name = $this->field_name;
