@@ -29,11 +29,12 @@ class NotEmptyFieldFilterIterator extends \FilterIterator
         $liste = $this->getInnerIterator()->current();
         $field_name = $this->field_name;
 
-        if (is_object($liste)):
-            return isset($liste->{$field_name}) and !empty($liste->{$field_name}); elseif (is_array($liste)):
+        if (is_object($liste)) {
+            return isset($liste->{$field_name}) and !empty($liste->{$field_name});
+        }
+        elseif (is_array($liste)) {
             return array_key_exists($field_name, $liste) and !empty($liste[ $field_name ]);
-
-        endif;
+        }
 
         return false;
     }

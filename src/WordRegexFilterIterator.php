@@ -35,18 +35,22 @@ class WordRegexFilterIterator extends \FilterIterator
     {
         $current = $this->getInnerIterator()->current();
 
-        if (is_array($current)):
+        if (is_array($current)) {
             if (empty($current[$this->field ])) {
                 return false;
             }
-        $var = $current[$this->field ]; elseif (is_object($current)):
+            $var = $current[$this->field ];
+        }
+        elseif (is_object($current)) {
+
             if (!isset($current->{$this->field})) {
                 return false;
             }
-        $var = $current->{$this->field}; else:
+            $var = $current->{$this->field};
+        }
+        else {
             return false;
-
-        endif;
+        }
 
         $regex = "/\b" . $this->word . "\b/i";
         return preg_match($regex, $var);

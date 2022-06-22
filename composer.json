@@ -26,20 +26,20 @@
   },
 
 	"require": {
-		"php": "^7.3|^8.0"
+		"php": "^7.4|^8.0"
 	},
 
     "require-dev": {
         "php-coveralls/php-coveralls": "^2.0",
         "phpunit/phpunit": "^9.0",
-        "friendsofphp/php-cs-fixer": "^2.12|^3.0"
+        "friendsofphp/php-cs-fixer": "^3.0"
     },
 
     "scripts": {
         "phpcs":       "php-cs-fixer fix --verbose --diff --dry-run src/",
         "phpcs-apply": "php-cs-fixer fix --verbose --diff src/",
 
-		"phpunit": "phpunit",
+        "phpunit"     : "phpunit --testdox",
 
 		"test": [
 			"@phpunit"
