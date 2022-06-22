@@ -36,16 +36,21 @@ class BlankSplitFilterIterator extends \FilterIterator
     {
         $current = $this->getInnerIterator()->current();
 
-        if (is_array($current)):
-            if (empty($current[$this->field ])):
+        if (is_array($current)) {
+            if (empty($current[$this->field ])) {
                 return false;
-        endif; elseif (is_object($current)):
-            if (!isset($current->{$this->field})):
+            }
+        }
+        elseif (is_object($current)) {
+
+            if (!isset($current->{$this->field})) {
                 return false;
-        endif;
-        $current = (array) $current; else:
+            }
+            $current = (array) $current;
+        }
+        else {
             return false;
-        endif;
+        }
 
 
         $var = $current[$this->field ];
