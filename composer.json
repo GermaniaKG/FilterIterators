@@ -39,7 +39,7 @@
         "phpcs":       "php-cs-fixer fix --verbose --diff --dry-run src/",
         "phpcs-apply": "php-cs-fixer fix --verbose --diff src/",
 
-		"phpunit": "phpunit",
+        "phpunit"     : "phpunit --testdox",
 
 		"test": [
 			"@phpunit"
