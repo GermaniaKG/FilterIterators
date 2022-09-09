@@ -14,10 +14,10 @@ class KeyNotFalseFilterIterator extends \FilterIterator
     public $active_key = 'active';
 
     /**
-     * @param \Traversable Anything iterable
-     * @param string       $active_key The key to compare
+     * @param \Traversable<array<mixed>|object> $iterator Traversable with arrays or objects
+     * @param string $active_key The key to compare
      */
-    public function __construct(\Traversable $iterator, $active_key)
+    public function __construct(\Traversable $iterator, string $active_key)
     {
         $this->active_key = $active_key;
         parent::__construct(new \IteratorIterator($iterator));

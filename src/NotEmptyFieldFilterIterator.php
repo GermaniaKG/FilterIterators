@@ -14,7 +14,7 @@ class NotEmptyFieldFilterIterator extends \FilterIterator
 
 
     /**
-     * @param \Traversable $iterator
+     * @param \Traversable<array<mixed>|object> $iterator Traversable with arrays or objects
      * @param string       $field_name
      */
     public function __construct(\Traversable $iterator, $field_name)
