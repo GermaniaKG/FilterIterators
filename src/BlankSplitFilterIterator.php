@@ -12,17 +12,20 @@ class BlankSplitFilterIterator extends \FilterIterator
 
 
     /**
-     * @var mixed
+     * @var string
      */
     public $word;
 
     /**
-     * @var mixed
+     * @var string
      */
-    public $split;
+    public $split = " ";
 
 
 
+    /**
+     * @param \Traversable<string[]|object> $items Traversable with arrays or objects
+     */
     public function __construct(\Traversable $items, string $field, string $word, string $split = " ")
     {
         $this->field = $field;

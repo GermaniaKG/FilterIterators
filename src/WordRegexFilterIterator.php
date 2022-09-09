@@ -21,7 +21,7 @@ class WordRegexFilterIterator extends \FilterIterator
 
 
     /**
-     * @param \Traversable $items Arrays
+     * @param \Traversable<array<mixed>|object> $items Traversable with arrays or objects
      */
     public function __construct(\Traversable $items, string $field, string $word)
     {
@@ -53,6 +53,6 @@ class WordRegexFilterIterator extends \FilterIterator
         }
 
         $regex = "/\b" . $this->word . "\b/i";
-        return preg_match($regex, $var);
+        return true == preg_match($regex, $var);
     }
 }

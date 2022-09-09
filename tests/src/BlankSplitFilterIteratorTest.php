@@ -38,12 +38,12 @@ class BlankSplitFilterIteratorTest extends \PHPUnit\Framework\TestCase
         $no_items_objects = array_map(function ($a) { return (object) $a; }, $no_items);
 
         return array(
-            [ $items,         "foo", "bar", 4],
-            [ $items_objects, "foo", "bar", 4],
+            'filter arrays for "bar" in "foo" key' => [ $items, "foo", "bar", 4],
+            'filter objects for "bar" in "foo" property' => [ $items_objects, "foo", "bar", 4],
 
-            [ $no_items,         "foo", "bar", 0],
-            [ $no_items_objects, "foo", "bar", 0],
-            [ array(),           "foo", "bar", 0]
+            'no matching items in array' => [ $no_items,         "foo", "bar", 0],
+            'no matching items in objects' => [ $no_items_objects, "foo", "bar", 0],
+            'no matching items in enpty array' => [ array(),           "foo", "bar", 0]
         );
     }
 }
