@@ -45,8 +45,8 @@ class NotEmptyFieldFilterIteratorTest extends \PHPUnit\Framework\TestCase
         }
 
         return array(
-            [ new \ArrayObject( $basic_array )   , $keyword, 4 ],
-            [ new \ArrayObject( $basic_objects ) , $keyword, 4 ]
+            'filter arrays with "active"-like values' => [ new \ArrayObject( $basic_array )   , $keyword, 4 ],
+            'filter objects for "active"-like values in property' => [ new \ArrayObject( $basic_objects ) , $keyword, 4 ]
         );
     }
 }

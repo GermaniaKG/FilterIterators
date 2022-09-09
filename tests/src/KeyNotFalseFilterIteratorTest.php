@@ -45,8 +45,8 @@ class KeyNotFalseFilterIteratorTest extends \PHPUnit\Framework\TestCase
         }
 
         return array(
-            [ new \ArrayObject( $basic_array )   , $keyword, 7 ],
-            [ new \ArrayObject( $basic_objects ) , $keyword, 8 ]
+            'filter arrays with "active"-like values' => [ new \ArrayObject( $basic_array )   , $keyword, 7 ],
+            'filter objects with "active"-like property values' => [ new \ArrayObject( $basic_objects ) , $keyword, 8 ]
         );
     }
 }
