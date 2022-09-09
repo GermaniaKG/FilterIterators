@@ -6,6 +6,11 @@ namespace Germania\FilterIterators;
  */
 class KeyNotFalseFilterIterator extends \FilterIterator
 {
+
+    /**
+     * @var string
+     */
+
     public $active_key = 'active';
 
     /**
