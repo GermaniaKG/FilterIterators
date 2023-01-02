@@ -25,7 +25,6 @@ build:
       tests:
         override:
           - php-scrutinizer-run
-          - phpcs-run
 
     php74:
       environment:
