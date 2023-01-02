@@ -2,6 +2,7 @@
 # .scrutinizer.yml
 
 build:
+  image: default-bionic
 
   dependencies:
     before:
