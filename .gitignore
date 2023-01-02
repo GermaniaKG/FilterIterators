@@ -58,3 +58,4 @@ config.json
 tests/build
 build
 phpunit.xml
+phpunit.xml.dist.bak
