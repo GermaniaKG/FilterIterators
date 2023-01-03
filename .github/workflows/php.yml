@@ -1,15 +1,23 @@
-name: CI
+# php.yml
+
+# Stolen from osteel’s article:
+# A GitHub workflow to check the compatibility of your PHP package with a range of dependency versions
+# https://tech.osteel.me/posts/a-github-workflow-to-check-the-compatibility-of-your-php-package-with-a-range-of-dependency-versions
+
+name: Tests
 
 on:
   push:
-    branches: [develop,main]
+    branches: [ main, develop ]
   pull_request:
-    branches: [main]
+    branches: [ main ]
+
+permissions:
+  contents: read
 
 jobs:
-
-  phpunit:
-    name: PHPUnit
+  tests:
+    name: Tests
     runs-on: ubuntu-latest
 
     strategy:
@@ -25,7 +33,7 @@ jobs:
           - "highest"
 
     steps:
-      - name: Checkout
+      - name: Checkout Repository
         uses: actions/checkout@v3
 
       - name: Setup PHP
@@ -34,10 +42,13 @@ jobs:
           php-version: ${{ matrix.php-version }}
           coverage: none
 
-      - name: Install composer dependencies
+      - name: Install Composer dependencies
         uses: ramsey/composer-install@v2
         with:
           dependency-versions: ${{ matrix.dependency-versions }}
 
       - name: Run PHPUnit
         run: vendor/bin/phpunit tests
+
+      - name: Run phpstan
+        run: vendor/bin/phpstan analyse
