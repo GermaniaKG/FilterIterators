@@ -9,3 +9,8 @@ parameters:
     paths:
         - src
 
+    reportUnmatchedIgnoredErrors: false
+
+    ignoreErrors:
+        - message: '#Parameter \#1 \$separator of function explode expects non-empty-string, string given.#'
+          path: src/BlankSplitFilterIterator.php
