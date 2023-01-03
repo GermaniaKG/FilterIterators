@@ -9,10 +9,7 @@
 
 [![Packagist](https://img.shields.io/packagist/v/germania-kg/filteriterators.svg?style=flat)](https://packagist.org/packages/germania-kg/filteriterators)
 [![PHP version](https://img.shields.io/packagist/php-v/germania-kg/filteriterators.svg)](https://packagist.org/packages/germania-kg/filteriterators)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/GermaniaKG/FilterIterators/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/FilterIterators/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/GermaniaKG/FilterIterators/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/FilterIterators/?branch=master)
-[![Build Status](https://scrutinizer-ci.com/g/GermaniaKG/FilterIterators/badges/build.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/FilterIterators/build-status/master)
-
+[![Tests](https://github.com/GermaniaKG/FilterIterators/actions/workflows/php.yml/badge.svg)](https://github.com/GermaniaKG/FilterIterators/actions/workflows/php.yml)
 
 ## Installation with Composer
 
